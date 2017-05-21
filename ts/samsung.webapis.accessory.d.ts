@@ -87,12 +87,12 @@ interface SAFileTransfer {
 
 interface SADataReceiveCallback {
     (channelId: SAChannelId, data: string): void;
-    onreceive(channelId: SAChannelId, data: string): void;
+    // onreceive(channelId: SAChannelId, data: string): void;
 }
 
 interface SASocketStatusCallback {
     (reason: SASocketStatusErrorCode): void;
-    onconnectionlost(reason: SASocketStatusErrorCode): void;
+    // onconnectionlost(reason: SASocketStatusErrorCode): void;
 }
 
 interface SAFileReceiveCallback {
@@ -110,7 +110,7 @@ interface SAFileSendCallback {
 
 interface SAAgentSuccessCallback {
     (agents: Array<SAAgent>): void;
-    onsuccess(agents: Array<SAAgent>): void;
+    // onsuccess(agents: Array<SAAgent>): void;
 }
 
 interface SAPeerAgentFindCallback {
@@ -127,12 +127,12 @@ interface ServiceConnectionCallback {
 
 interface SADeviceStatusCallback {
     (type: TransportType, status: DeviceStatus): void;
-    ondevicestatus(type: TransportType, status: DeviceStatus): void;
+    // ondevicestatus(type: TransportType, status: DeviceStatus): void;
 }
 
 interface SAAuthenticatePeerAgentSuccessCallback {
     (peerAgent: SAPeerAgent,  authToken: SAAuthenticationToken): void;
-    onsuccess(peerAgent: SAPeerAgent,  authToken: SAAuthenticationToken): void;
+    // onsuccess(peerAgent: SAPeerAgent,  authToken: SAAuthenticationToken): void;
 }
 
 
