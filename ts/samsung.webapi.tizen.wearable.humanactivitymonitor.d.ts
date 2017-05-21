@@ -15,39 +15,16 @@ type ActivityAccuracy = "LOW" | "MEDIUM" | "HIGH" ;
 type SleepStatus = "ASLEEP" | "AWAKE" | "UNKNOWN" ;
 
 interface HumanActivityMonitorManager {
-
-    getHumanActivityData(
-        type: HumanActivityType,
-        successCallback: HumanActivityMonitorSuccessCallback,
-        errorCallback: ErrorCallback): void|never; // raises(WebAPIException);
-
-    start(
-        type: HumanActivityType,
-        successCallback: HumanActivityMonitorSuccessCallback,
-        errorCallback: ErrorCallback): void|never; // raises(WebAPIException);
-    
+    getHumanActivityData(type: HumanActivityType, successCallback: HumanActivityMonitorSuccessCallback, errorCallback: ErrorCallback): void|never; // raises(WebAPIException);
+    start(type: HumanActivityType, successCallback: HumanActivityMonitorSuccessCallback, errorCallback: ErrorCallback): void|never; // raises(WebAPIException);
     stop(type: HumanActivityType): void|never; // raises(WebAPIException);
-
     setAccumulativePedometerListener(changeCallback: HumanActivityMonitorSuccessCallback): void|never; // raises(WebAPIException);
-
     unsetAccumulativePedometerListener(): void|never; // raises(WebAPIException);
-
-    addActivityRecognitionListener(
-        type: ActivityRecognitionType,
-        listener: HumanActivityMonitorSuccessCallback,
-        errorCallback: ErrorCallback): number|never; // raises(WebAPIException);
-
-    removeActivityRecognitionListener(listenerId: number, errorCallback: ErrorCallback): void; 
-
+    addActivityRecognitionListener(type: ActivityRecognitionType, listener: HumanActivityMonitorSuccessCallback, errorCallback: ErrorCallback): number|never; // raises(WebAPIException);
+    removeActivityRecognitionListener(listenerId: number, errorCallback: ErrorCallback): void;
     startRecorder(type: HumanActivityRecorderType, option: HumanActivityRecorderOption): void|never; // raises(WebAPIException);
-
     stopRecorder(type: HumanActivityRecorderType): void|never; // raises(WebAPIException);
-
-    readRecorderData(
-        type: HumanActivityRecorderType,
-        query: HumanActivityRecorderQuery,
-        successCallback: HumanActivityReadRecorderSuccessCallback,
-        errorCallback: ErrorCallback): void|never; // raises(WebAPIException);    
+    readRecorderData(type: HumanActivityRecorderType, query: HumanActivityRecorderQuery, successCallback: HumanActivityReadRecorderSuccessCallback, errorCallback: ErrorCallback): void|never; // raises(WebAPIException);
 }
 
 interface StepDifference {
