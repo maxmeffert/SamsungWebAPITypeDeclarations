@@ -14,7 +14,3 @@ interface HumanActivityMonitorManager {
     start(type: HumanActivityType, successCallback: HumanActivityMonitorSuccessCallback, errorCallback: ErrorCallback): void
     stop(type: HumanActivityType): void;
 }
-
-declare namespace tizen {
-    const humanactivitymonitor : HumanActivityMonitorManager;
-}

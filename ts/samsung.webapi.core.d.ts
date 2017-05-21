@@ -3,7 +3,7 @@
  */
 
 type FilterMatchFlag = "EXACTLY"| "FULLSTRING"| "CONTAINS"| "STARTSWITH"| "ENDSWITH"| "EXISTS" ;
- 
+
 type SortModeOrder = "ASC"| "DESC" ;
 
 type CompositeFilterType = "UNION"| "INTERSECTION" ;
@@ -41,7 +41,6 @@ declare class WebAPIException {
     readonly code: number;
     readonly name: string;
     readonly message: string;
-    
 }
 
 declare namespace WebAPIException {

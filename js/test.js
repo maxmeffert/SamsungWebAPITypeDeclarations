@@ -3,8 +3,3 @@
 tizen.humanactivitymonitor.start("HRM", function (hrmData) {
 }, function (e) {
 });
-var Foo = (function () {
-    function Foo() {
-    }
-    return Foo;
-}());

@@ -1,6 +1,8 @@
 /**
  * http://developer.samsung.com/onlinedocs/samsung_webapi_guide_public_2.0/html/wapi_spec/sap.html#full-webidl
  */
+
+
 type SARole = "PROVIDER" | "CONSUMER";
 
 type TransportType = "TRANSPORT_BLE" | "TRANSPORT_BT" | "TRANSPORT_USB" | "TRANSPORT_WIFI";
@@ -133,9 +135,4 @@ interface SADeviceStatusCallback {
 interface SAAuthenticatePeerAgentSuccessCallback {
     (peerAgent: SAPeerAgent,  authToken: SAAuthenticationToken): void;
     // onsuccess(peerAgent: SAPeerAgent,  authToken: SAAuthenticationToken): void;
-}
-
-
-declare namespace webapis {
-    const sa: SAManager;
 }
