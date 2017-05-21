@@ -29,12 +29,12 @@ interface CompositeFilter extends AbstractFilter {
 
 interface SortMode {
     attributeName: string;    
-    order: SortModeOrder; // setraises(WebAPIException);
+    order: SortModeOrder|never; // setraises(WebAPIException);
 }
 
 interface SimpleCoordinates {
-    latitude: number; // setraises(WebAPIException);
-    longitude: number; // setraises(WebAPIException);
+    latitude: number|never; // setraises(WebAPIException);
+    longitude: number|never; // setraises(WebAPIException);
 }
 
 declare class WebAPIException {
